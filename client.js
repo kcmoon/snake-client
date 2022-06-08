@@ -13,10 +13,17 @@ const connect = function () {
   conn.on("connect", () => {
     console.log("You are now connected.");
   });
-  
+
   conn.on("connect", () => {
     conn.write("Name: KCM");
   });
+
+  // conn.on('connect', () => {
+  //   for (let i = 1; i < 11; i++) {
+  //     setTimeout(() => {
+  //     conn.write("Move: up")}, i * 1000)
+  //   };
+  // });
 
   conn.on("data", () => {
     console.log('You dead! You idled.');
